@@ -1,0 +1,208 @@
+:revealjs_theme: white
+:customcss: index.css
+
+= Chiffrement et Certificats
+
+== Vocabulaire et introduction
+
+=== Objectifs
+
+* Comprendre de quoi on parle
+* Comprendre les usages
+* Savoir quoi utiliser
+
+=== Terminologie
+
+* Cryptographie : Protection d'un message à l'aide d'une clé de chiffrement
+* Cryptogramme : Message chiffré auquel on a appliqué une technique de cryptographie
+* Cryptanalyse : Science qui consiste à déchiffrer un cryptogramme sans posséder la clé, décrypter
+* Cryptage : Anglicisme qui ne veut normalement rien dire
+
+=== À quoi ça sert ?
+
+« La sécurité est une fonction incontournable des réseaux. Puisqu’on ne voit pas son correspondant directement, il faut l’**authentifier**. Puisqu’on ne sait pas par où passent les données, il faut les **chiffrer**. Puisqu’on ne sait pas si quelqu’un ne va pas modifier les informations émises, il faut vérifier leur **intégrité**. »
+
+Guy Pujolle, « Les Réseaux », Éditions Eyrolles, 2014, p. 641
+
+=== À quoi ça sert ?
+
+Les principaux objectifs de la cryptographie :
+
+* Intégrité : Assurer que les données n’ont pas été modifiées lors de leur transmission
+* Authenticité : Vérifier l’identité d’une personne ou d’un ordinateur
+* Confidentialité : Assurer que l’information n’est accessible qu’à ceux dont l’accès est autorisé
+
+=== Comment on fait ?
+
+Pour atteindre ces différents objectifs :
+
+* Intégrité des données : Garantie par une « empreinte », obtenue via des fonctions de hachage
+* Authenticité d’un message : Garantie par l’apposition d’une « signature numérique » (empreinte chiffrée)
+* Confidentialité des données : Garantie par le « chiffrement », grâce un algorithme cryptographique
+
+=== Ressources
+
+* Wikipédia : https://fr.wikipedia.org/wiki/Cryptographie[Cryptographie]
+* Wikipédia : https://fr.wikipedia.org/wiki/Confidentialit%C3%A9[Confidentialité]
+* Wikipédia : https://fr.wikipedia.org/wiki/Authentification[Authenticité]
+* Wikipédia : https://fr.wikipedia.org/wiki/Int%C3%A9grit%C3%A9_(cryptographie)[Intégrité]
+
+=== Questions ?
+
+== Fonction de hachage
+
+=== Objectifs
+
+* Comprendre le fonctionnement
+* Garantir l'intégrité des données
+
+=== Définition
+
+Une fonction de hachage est une fonction qui convertit un grand ensemble en un plus petit ensemble, appelé « empreinte ». Il est impossible de la déchiffrer pour revenir à l’ensemble d’origine, ce n’est donc pas une technique de chiffrement.
+
+Exemples de fonctions de hachage : https://fr.wikipedia.org/wiki/MD5[MD5], https://fr.wikipedia.org/wiki/SHA-0[SHA], https://fr.wikipedia.org/wiki/SHA-1[SHA-1], https://fr.wikipedia.org/wiki/SHA-2[SHA-2], etc.
+
+=== Fonctionnement
+
+On applique une fonction de hachage sur les données, pour obtenir en sortie l’empreinte des données.
+
+image::images/hachage/image1.png[Fonction de hachage]
+
+=== Ressources
+
+* Wikipédia : https://fr.wikipedia.org/wiki/Fonction_de_hachage[Hachage]
+* Ippon : https://blog.ippon.fr/2017/02/28/sha-1-hachage-et-securite/[Hachage]
+
+=== Questions ?
+
+== Cryptographie symétrique
+
+=== Objectifs
+
+* Savoir quoi utiliser
+* Comprendre le fonctionnement
+* Sécuriser des données
+
+=== Définition
+
+On utilise des algorithmes dits symétriques, qui sont publics (cf. exemples), avec des clés secrètes. Afin de pouvoir chiffrer et déchiffrer les données, tous les participants à la communication doivent partager la même clé secrète. D’où le nom « symétrique », la clé est la même de deux côtés d’une connexion.
+
+Exemples d’algorithmes symétriques : https://fr.wikipedia.org/wiki/Advanced_encryption_standard[AES], https://fr.wikipedia.org/wiki/International_Data_Encryption_Algorithm[IDEA], https://fr.wikipedia.org/wiki/Triple_DES[3DES], https://fr.wikipedia.org/wiki/Blowfish[Blowfish], etc.
+
+=== Avantages / Inconvénients
+
+Comparée à l’asymétrique, la symétrique a les avantages suivants :
+
+* Simplicité de mise en œuvre
+* Léger en terme de consommation CPU
+* Chiffrement robuste
+
+Malgré ces avantages, le chiffrement symétrique à un inconvénient de taille :
+
+* L’échange de clé
+
+=== Fonctionnement
+
+[transition=none]
+=== !
+
+image::images/symetrique/image1.png[width=75%]
+
+[.notes]
+--
+Bob veut envoyer un message à Alice.
+--
+
+[transition=none]
+=== !
+
+image::images/symetrique/image2.png[width=75%]
+
+[.notes]
+--
+Bob génère un clé secrète.
+--
+
+[transition=none]
+=== !
+
+
+image::images/symetrique/image3.png[width=75%]
+
+[.notes]
+--
+Bob chiffre son message à l’aide d’un algorithme de chiffrement symétrique et la sa clé secrète.
+--
+
+[transition=none]
+=== !
+
+
+image::images/symetrique/image4.png[width=75%]
+
+[.notes]
+--
+Bob obtient un cryptogramme.
+--
+
+[transition=none]
+=== !
+
+
+image::images/symetrique/image5.png[width=75%]
+
+[.notes]
+--
+Bob envoie le cryptogramme à Alice à travers le réseau.
+--
+
+[transition=none]
+=== !
+
+
+image::images/symetrique/image6.png[width=25%]
+
+[.notes]
+--
+Bob et Alice se rencontrent pour échanger la clé de manière sécurisée.
+--
+
+[transition=none]
+=== !
+
+
+image::images/symetrique/image7.png[width=75%]
+
+[.notes]
+--
+Alice est en possession de la clé secrète de Bob.
+--
+
+[transition=none]
+=== !
+
+
+image::images/symetrique/image8.png[width=75%]
+
+[.notes]
+--
+Avec la clé secrète, Alice déchiffre le cryptogramme de Bob à l’aide de l’algorithme de chiffrement symétrique.
+--
+
+[transition=none]
+=== !
+
+
+image::images/symetrique/image9.png[width=75%]
+
+[.notes]
+--
+Alice obtient le message en clair de Bob.
+--
+
+=== Ressources
+
+* Wikipédia : https://fr.wikipedia.org/wiki/Chiffrement[Chiffrement]
+* Wikipédia : https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique[Symétrique]
+
+=== Questions ?

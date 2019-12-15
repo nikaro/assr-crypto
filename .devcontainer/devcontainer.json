@@ -1,0 +1,10 @@
+{
+    "name": "crypto-cours",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "extensions": [],
+    "settings": {},
+    "vim-extensions": [],
+    "vim-settings": []
+}
