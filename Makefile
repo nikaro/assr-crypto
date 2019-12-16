@@ -14,7 +14,7 @@ render:
 	@bundle exec asciidoctor-revealjs index.adoc
 
 .PHONY: serve
-## serve: Serves the content on http://localhost:8000
+## serve: Serves the content on port 8000
 serve:
 	@echo "Serving..."
 	@python3 -m http.server
