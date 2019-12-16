@@ -1,7 +1,10 @@
 
 # Chiffrement et Certificats
 
-## Ressources
+Utilisez `devc` (ou directement docker-compose) pour lancer `.devcontainer/docker-compose.yml`.
 
-- <https://tls.ulfheim.net/>
-- <https://tls13.ulfheim.net/>
+```
+$ devc up
+$ devc shell
+(container) $ make
+```
