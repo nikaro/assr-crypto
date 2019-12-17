@@ -1,7 +1,7 @@
 
-# Chiffrement et Certificats
+# Chiffrement et Certificats - Cours
 
-Utilisez `devc` (ou directement docker-compose) pour lancer `.devcontainer/docker-compose.yml`.
+Utilisez [devc](https://git.karolak.fr/nicolas/devc/) (ou directement docker-compose) pour lancer `.devcontainer/docker-compose.yml`.
 
 ```
 $ devc up
