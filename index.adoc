@@ -725,3 +725,7 @@ Une fois la connexion terminée ou expirée, le serveur révoque la clé de sess
 * NGINX : https://www.nginx.com/blog/nginx-https-101-ssl-basics-getting-started/[HTTPS 101]
 
 === Questions ?
+
+== TP
+
+<https://git.karolak.fr/assr/crypto-tp>
