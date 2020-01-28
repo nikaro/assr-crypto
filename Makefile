@@ -19,6 +19,12 @@ serve:
 	@echo "Serving..."
 	@python3 -m http.server
 
+.PHONY: upload
+## upload: Upload the content on the server
+upload:
+	@echo "Uploading..."
+	@rsync -avzz . home.karolak.fr:/var/www/crypto/
+
 .PHONY: help
 ## help: Prints this help message
 help:
