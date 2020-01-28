@@ -168,7 +168,7 @@ Alice obtient le message en clair de Bob.
 
 On utilise des algorithmes dits asymétriques, qui sont publics (cf. exemples), avec une paire de clés : une clé publique et une clé privée. La particularité des algorithmes asymétriques est qu’un message chiffré avec une clé publique n’est lisible que par le propriétaire de la clé privée correspondante.
 
-Exemples d’algorithmes asymétriques : RSA, El Gamail, etc.
+Exemples d’algorithmes asymétriques : RSA, El Gamal, etc.
 
 === Avantages / Inconvénients
 
