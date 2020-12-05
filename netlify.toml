@@ -5,7 +5,7 @@ command = "make build"
 [[headers]]
 for = "/*"
 [headers.values]
-Content-Security-Policy = "default-src 'none'; base-uri 'self'; style-src 'self'; img-src 'self'; form-action 'none'; frame-ancestors 'none'"
+Content-Security-Policy = "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'; frame-ancestors 'none'"
 Referrer-Policy = "no-referrer, strict-origin-when-cross-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
