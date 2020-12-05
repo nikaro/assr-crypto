@@ -5,15 +5,22 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN \
     # install required tools
-    sudo apt-get update && \
+    curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && \
     sudo apt-get install -y \
-        asciidoctor \
-	ruby-bundler \
+	nodejs \
         && \
     # clean up
     sudo apt-get autoremove -y && \
     sudo apt-get clean -y && \
     sudo rm -rf /var/lib/apt/lists/* &&  \
+    # update npm
+    npm config set prefix ~/.local && \
+    npm install --global npm && \
+    npm install --global \
+        netlify-cli \
+        @asciidoctor/core \
+        @asciidoctor/reveal.js \
+        && \
     :
 
 # switch back to dialog for any ad-hoc use of apt-get
