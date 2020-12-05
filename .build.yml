@@ -1,6 +1,5 @@
 image: alpine/latest
 packages:
-  - coreutils
   - make
   - npm
 sources:
@@ -9,7 +8,7 @@ secrets:
   - 2c93dcdd-ab19-4fe7-86af-a48cfa32cf07
   - ae2cd5c2-6598-4d87-bb2c-69cc8cead737
 environment:
-  PATH: $HOME/.local/bin:$PATH
+  PATH: $HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 tasks:
   - setup: |
       cat ~/.netlify-auth-token >> ~/.buildenv
