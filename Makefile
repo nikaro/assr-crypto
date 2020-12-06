@@ -2,7 +2,7 @@
 all:
 
 .PHONY: setup
-## setup: Installs required Gems
+## setup: Installs required tools
 setup:
 	@echo "Installing..."
 	@command -v netlify || npm install --global netlify-cli

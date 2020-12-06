@@ -3,6 +3,32 @@
 
 = Chiffrement et Certificats
 
+== Histoire
+
+=== Le chiffre de César
+
+Appelé aussi, chiffrement par décalage, il consiste simplement à décaler d'une valeur prédéfinie les lettres d'un message.
+
+image::images/histoire/cesar.png[width=75%]
+
+Problème : facilement déchiffrable, il n'y a que 25 clés possibles.
+
+=== Le chiffre de Vigenère
+
+Cette fois-ci il s'agit d'un chiffrement par substitution polyalphabétique.
+
+image::images/histoire/vigenere.jpg[width=75%]
+
+=== Cryptographie mathématique
+
+Claude Shannon est considéré par plusieurs comme le père de la cryptographie mathématique. Il a défini les deux principaux objectifs de la cryptologie : le secret et l'authentification. Il a mis l'accent sur l'exploration du secret et, trente-cinq ans plus tard, G. J. Simmons aborderait la question de l'authentification.
+
+=== Ressources
+
+* Wikipédia : https://fr.wikipedia.org/wiki/Histoire_de_la_cryptologie[Histoire de la cryptologie]
+* Wikipédia : https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage[Chiffre de César]
+* Wikipédia : https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re[Chiffre de Vigenère]
+
 == Vocabulaire et introduction
 
 === Terminologie
@@ -728,7 +754,7 @@ Une fois la connexion terminée ou expirée, le serveur révoque la clé de sess
 
 == TP
 
-* <https://git.karolak.fr/assr/crypto-tp>
+* <https://git.sr.ht/~nka/crypto-tp>
 
 == Veille
 
