@@ -1,6 +1,5 @@
 [build]
 publish = "output/"
-command = "make build"
 
 [[headers]]
 for = "/*"
