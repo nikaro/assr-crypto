@@ -5,7 +5,6 @@ all:
 ## setup: Installs required tools
 setup:
 	@echo "Installing..."
-	@command -v netlify || npm install --global netlify-cli
 	@command -v asciidoctor-revealjs || npm install --global @asciidoctor/core @asciidoctor/reveal.js
 
 .PHONY: build
@@ -18,13 +17,7 @@ build:
 ## serve: Serves the content on port 8000
 serve:
 	@echo "Serving..."
-	@python3 -m http.server
-
-.PHONY: deploy
-## deploy: Deploy to Netlify
-deploy:
-	@echo "Uploading..."
-	@netlify deploy --dir=output --prod --build
+	@cd output ; python3 -m http.server
 
 .PHONY: help
 ## help: Prints this help message
