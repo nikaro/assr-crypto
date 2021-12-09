@@ -754,7 +754,7 @@ Une fois la connexion terminée ou expirée, le serveur révoque la clé de sess
 
 == TP
 
-* <https://git.sr.ht/~nka/crypto-tp>
+* <https://gitlab.com/assr/crypto-tp>
 
 == Veille
 
