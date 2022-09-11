@@ -1,5 +1,4 @@
 :revealjs_theme: white
-:customcss: index.css
 
 = Chiffrement et Certificats
 
