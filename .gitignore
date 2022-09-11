@@ -1,2 +1,4 @@
 node_modules/
-index.html
+public/*
+!public/_headers
+!public/_redirects

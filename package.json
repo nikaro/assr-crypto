@@ -6,8 +6,8 @@
     "reveal.js": "^4.3.1"
   },
   "scripts": {
-    "build": "node_modules/.bin/asciidoctor-revealjs index.adoc",
-    "clean": "rm -rf node_modules/ index.html",
-    "start": "node_modules/.bin/http-server"
+    "build": "mkdir -p public/ ; cp -r images public/ ; cp -r node_modules/reveal.js public/ ; node_modules/.bin/asciidoctor-revealjs --attribute revealjsdir=reveal.js --out-file public/index.html index.adoc",
+    "clean": "rm -rf node_modules/ public/index.html public/reveal.js/ public/images/",
+    "start": "node_modules/.bin/http-server public/"
   }
 }
