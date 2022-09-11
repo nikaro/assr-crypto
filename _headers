@@ -1,0 +1,17 @@
+/*
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; form-action 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/*.css
+  Cache-Control: public, max-age=604800
+  Content-Type: text/css
+
+/*.js
+  Cache-Control: public, max-age=604800
+  Content-Type: text/javascript
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
