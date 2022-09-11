@@ -1,9 +1,10 @@
 
 # Chiffrement et Certificats - Cours
 
-Utilisez [devc](https://git.sr.ht/~nka/devc) (ou directement docker-compose) pour lancer `.devcontainer/docker-compose.yml`.
+Utilisez [devc](https://github.com/nikaro/devc) pour lancer le devcontainer.
 
 ```
 $ devc shell
-(container) $ make build
+(container) $ npm run build
+(container) $ npm start
 ```
