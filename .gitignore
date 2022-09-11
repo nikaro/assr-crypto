@@ -1,5 +1,2 @@
-.bundle/gems/
-.bundle/.bin/
-
-# Local Netlify folder
-.netlify
+node_modules/
+index.html

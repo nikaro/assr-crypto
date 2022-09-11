@@ -758,8 +758,8 @@ Une fois la connexion terminée ou expirée, le serveur révoque la clé de sess
 
 == Veille
 
-* Podcast dédié à la cyber sécurité : <https://www.nolimitsecu.fr/> (fr)
-* Lettre d'information autour de TLS : <https://www.feistyduck.com/bulletproof-tls-newsletter/> (en)
-* Blog de Mozilla dédié à la sécurité : <https://blog.mozilla.org/security/> (en)
-* Journal du Hacker (tag: sécurité) : <https://www.journalduhacker.net/t/s%C3%A9curit%C3%A9> (fr)
-* Lobsters (tag: security) : <https://lobste.rs/t/security> (en)
+* https://www.nolimitsecu.fr/[Podcast NoLimitSecu] (fr)
+* https://www.feistyduck.com/bulletproof-tls-newsletter/[Bulletprood TLS Newsletter] (en)
+* https://blog.mozilla.org/security/[Mozilla Security Blog] (en)
+* https://www.journalduhacker.net/t/s%C3%A9curit%C3%A9[Journal du Hacker (tag: sécurité)] (fr)
+* https://lobste.rs/t/security[Lobsters (tag: security)] (en)
