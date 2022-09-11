@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@asciidoctor/core": "^2.2.6",
     "@asciidoctor/reveal.js": "^5.0.0-rc.1",
     "http-server": "^14.1.1",
     "reveal.js": "^4.3.1"
