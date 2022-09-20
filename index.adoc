@@ -751,10 +751,6 @@ Une fois la connexion terminée ou expirée, le serveur révoque la clé de sess
 
 === Questions ?
 
-== TP
-
-* <https://gitlab.com/assr/crypto-tp>
-
 == Veille
 
 * https://www.nolimitsecu.fr/[Podcast NoLimitSecu] (fr)
@@ -762,3 +758,7 @@ Une fois la connexion terminée ou expirée, le serveur révoque la clé de sess
 * https://blog.mozilla.org/security/[Mozilla Security Blog] (en)
 * https://www.journalduhacker.net/t/s%C3%A9curit%C3%A9[Journal du Hacker (tag: sécurité)] (fr)
 * https://lobste.rs/t/security[Lobsters (tag: security)] (en)
+
+== TP
+
+* <https://github.com/nikaro/assr-crypto/tree/main/tp>
