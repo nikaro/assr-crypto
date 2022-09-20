@@ -38,7 +38,7 @@ services:
 
   # CLIENT WEB
   client:
-    image: "drwetter/testssl.sh:latest"
+    image: "jauderho/testssl.sh"
     volumes:
       # certificat de la CA
       - "./certs/ca.cert.pem:/usr/local/share/ca-certificates/cacert.crt"

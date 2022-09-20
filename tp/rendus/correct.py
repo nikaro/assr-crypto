@@ -78,6 +78,10 @@ class Correct:
         # start docker environment
         self.docker_up()
 
+        # remove existing testssl results
+        self.workdir.joinpath("certs", "results.json").unlink(missing_ok=True)
+        self.workdir.joinpath("certs", "output.log").unlink(missing_ok=True)
+
         # run docker tests
         self.test_nginx_config(1)
         self.test_testssl(5)
@@ -604,7 +608,8 @@ class Correct:
         cmd = [
             "grep",
             "--quiet",
-            r"listen\s443",
+            "--extended-regexp",
+            r"listen\s+443",
             str(self.workdir.joinpath("config/nginx.conf")),
         ]
         if self.verbose >= 2:
