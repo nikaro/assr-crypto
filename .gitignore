@@ -1,4 +1,18 @@
+# builds
 node_modules/
 public/*
 !public/_headers
 !public/_redirects
+
+# ne jamais mettre à jour les fichiers initiaux
+tp/certs/
+tp/config/
+tp/www/
+
+# ignorer les fichiers de rendus
+*.zip
+tp/rendus/*
+!tp/rendus/correct.py
+
+# macos shit
+.DS_Store
