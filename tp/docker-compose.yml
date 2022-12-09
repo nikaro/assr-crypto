@@ -26,8 +26,6 @@ services:
       - "./certs/web.cert.pem:/etc/ssl/assr/web.cert.pem"
       - "./certs/web.csr.pem:/etc/ssl/assr/web.csr.pem"
       - "./certs/web.csr.conf:/etc/ssl/assr/web.csr.conf"
-      # html
-      - "./www:/var/www"
     ports:
       - "80:80"
       - "443:443"

@@ -8,12 +8,12 @@ Au programme :
 
 ## Instructions
 
-* [Préparation de l'environnement de travail](01-preparation_environnement.md)
-* [Consigne du TP](02-consignes_tp.md)
+* [Préparation de l'environnement de travail](docs/01-preparation_environnement.md)
+* [Consigne du TP](docs/02-consignes_tp.md)
 
 ## Mémos
 
-* [OpenSSL](03-memo_openssl.md)
-* [NGINX](04-memo_nginx.md)
-* [Apache](05-memo_apache.md)
-* [Sécurisation](06-memo_securisation.md)
+* [OpenSSL](docs/03-memo_openssl.md)
+* [NGINX](docs/04-memo_nginx.md)
+* [Apache](docs/05-memo_apache.md)
+* [Sécurisation](docs/06-memo_securisation.md)

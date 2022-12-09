@@ -53,7 +53,6 @@ Créez un répertoire sur le modèle `NOM_Prenom` (sans espaces et/ou caractère
 
 * `config/nginx.conf` : doit contenir l'intégralité de votre configuration Nginx
 * `certs/*.pem` : tous les certificats utilisé durant le TP
-* `www/index.html` : la page web servie
 
 Compressez au format ZIP le répertoire, avec le même nom de fichier que pour le répertoire.
 
@@ -66,11 +65,10 @@ NOM_Prenom.zip
     │   ├── ca.privkey.pem
     │   ├── web.cert.pem
     │   ├── web.csr.pem
+    │   ├── web.csr.conf
     │   └── web.privkey.pem
-    ├── config
-    │   └── nginx.conf
-    └── www
-        └── index.html
+    └── config
+        └── nginx.conf
 ```
 
 **Respectez scrupuleusement ces consignes, la correction est semi-automatique, si le script de correction échoue parce que vous n'avez pas nommé un fichier correctement vous n'aurez pas les points.**
