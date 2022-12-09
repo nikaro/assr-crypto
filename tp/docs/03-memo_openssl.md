@@ -70,7 +70,7 @@ Détail des arguments de la commande :
 * `-key <clé_priv>` : indique la clé privée qu'on utilise
 * `-out <clé_priv>` : indique le fichier de sortie dans lequel va être enregistrée la demande de signature de certificat
 
-Pour information, le champ `commonName` (CN) est deprecie par les navigateurs Web, pour qu'un certificate soit considere comme valide par ceux-ci il doit posseder l'extension `subjectAltName` (SAN).
+Pour information, le champ `commonName` (CN) est déprécié par les navigateurs Web, pour qu'un certificat soit considéré comme valide par ceux-ci il doit posseder l'extension `subjectAltName` (SAN).
 
 ## Signer une demande de certificat
 
