@@ -8,6 +8,8 @@ public/*
 tp/certs/
 tp/config/
 tp/www/
+*.pem
+*.conf
 
 # ignorer les fichiers de rendus
 *.zip

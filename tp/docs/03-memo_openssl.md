@@ -70,6 +70,8 @@ Détail des arguments de la commande :
 * `-key <clé_priv>` : indique la clé privée qu'on utilise
 * `-out <clé_priv>` : indique le fichier de sortie dans lequel va être enregistrée la demande de signature de certificat
 
+Pour information, le champ `commonName` (CN) est deprecie par les navigateurs Web, pour qu'un certificate soit considere comme valide par ceux-ci il doit posseder l'extension `subjectAltName` (SAN).
+
 ## Signer une demande de certificat
 
 ```bash
@@ -89,6 +91,39 @@ Détail des arguments de la commande :
 * `-CA <cert_ca>` : indique le certificat de la CA qu'on utilise
 * `-CAkey <clé_priv_ca>` : indique la clé privée de la CA qu'on utilise
 * `-CAcreateserial` : créer le fichier de numéro de série de la CA, il n'est obligatoire que la première fois qu'on signe un certificat
+
+## Générer une demande de signature de certificat (CSR) avec subjectAltName (SAN)
+
+Creation du fichier de configuration :
+
+```bash
+cat <<EOF > monsite_csr.conf
+[ req ]
+prompt = no
+distinguished_name = dn
+req_extensions = req_ext
+
+[ dn ]
+CN = exemple.com
+emailAddress = admin@exemple.com
+O = ASSR
+OU = SECU
+L = Lieusaint
+ST = France
+C = FR
+
+[ san ]
+subjectAltName = DNS: www.exemple.com
+EOF
+
+openssl req -new -config monsite_csr.conf -key monsite_priv_key.pem -out monsite_csr.pem
+```
+
+## Signer une demande de certificat avec SAN
+
+```bash
+openssl x509 -req -extfile certs/web/csr/conf -extensions san -days 90 -in monsite_csr.pem -out monsite_cert.pem -CA ca_cert.pem -CAkey ca_priv_key.pem -CAcreateserial
+```
 
 ## Quelques commandes en vrac
 

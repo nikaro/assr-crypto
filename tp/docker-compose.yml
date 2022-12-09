@@ -11,6 +11,7 @@ services:
       # certificats
       - "./certs/ca.cert.pem:/etc/ssl/ca/ca.cert.pem"
       - "./certs/ca.privkey.pem:/etc/ssl/ca/ca.privkey.pem"
+      - "./certs/web.csr.conf:/etc/ssl/assr/web.csr.conf"
       - "./certs/web.csr.pem:/etc/ssl/ca/web.csr.pem"
       - "./certs/web.cert.pem:/etc/ssl/ca/web.cert.pem"
     command: "sleep infinity"
@@ -24,8 +25,9 @@ services:
       # certificats du serveur
       - "./certs/web.privkey.pem:/etc/ssl/assr/web.privkey.pem"
       - "./certs/web.cert.pem:/etc/ssl/assr/web.cert.pem"
-      - "./certs/web.csr.pem:/etc/ssl/assr/web.csr.pem"
       - "./certs/web.csr.conf:/etc/ssl/assr/web.csr.conf"
+      - "./certs/web.csr.pem:/etc/ssl/assr/web.csr.pem"
+      - "./certs/ca.cert.pem:/etc/ssl/assr/ca.cert.pem"
     ports:
       - "80:80"
       - "443:443"
