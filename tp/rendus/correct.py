@@ -5,7 +5,7 @@ Correction script.
 """
 
 # TODO: detect type of key: RSA or EC
-# TODO: check https to https redirect
+# TODO: check http to https redirect
 
 import argparse
 import json
@@ -162,8 +162,6 @@ class Correct:
             and self.workdir.joinpath("certs/web.privkey.pem").is_file()
             and self.workdir.joinpath("config/").is_dir()
             and self.workdir.joinpath("config/nginx.conf").is_file()
-            and self.workdir.joinpath("www/").is_dir()
-            and self.workdir.joinpath("www/index.html").is_file()
         ):
             if self.verbose >= 1:
                 print("error: at least one of the required files is missing")
