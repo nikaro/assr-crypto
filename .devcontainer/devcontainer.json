@@ -1,5 +1,34 @@
 {
     "name": "crypto-cours",
-    "image": "node",
-    "forwardPorts": ["8080:8080"]
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "forwardPorts": [
+        "8080:8080"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"EditorConfig.EditorConfig",
+				"dbaeumer.vscode-eslint",
+				"ms-python.vscode-pylance",
+				"ms-python.python"
+			]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {}
+    },
+    "updateContentCommand": "sudo apt-get update --yes --quiet",
+    "postCreateCommand": {
+        "packages": [
+            "sudo",
+            "apt-get",
+            "install",
+            "--yes",
+            "--quiet",
+            "--no-install-recommends",
+            "bash-completion"
+        ]
+    }
 }
